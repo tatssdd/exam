@@ -139,7 +139,6 @@ export const GeocodeMap = ({ events }: GeocodeMapProps) => {
         <Filters
           categoryFilter={categoryFilter}
           setCategoryFilter={setCategoryFilter}
-          dateFilter={dateFilter}
           setDateFilter={setDateFilter}
           favoriteFilter={favoriteFilter}
           setFavoriteFilter={setFavoriteFilter}

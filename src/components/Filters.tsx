@@ -11,7 +11,6 @@ const StyledFilters = styled(Flex)`
 interface FiltersProps {
   categoryFilter: string | null;
   setCategoryFilter: (category: string | null) => void;
-  dateFilter: string | null;
   setDateFilter: (date: string | null) => void;
   favoriteFilter: boolean;
   setFavoriteFilter: (fav: boolean) => void;
@@ -22,7 +21,6 @@ interface FiltersProps {
 export const Filters = ({
   categoryFilter,
   setCategoryFilter,
-  dateFilter,
   setDateFilter,
   favoriteFilter,
   setFavoriteFilter,
