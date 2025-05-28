@@ -5,6 +5,9 @@ import styled from '@emotion/styled';
 const StyledFilters = styled(Flex)`
   justify-content: space-around;
   height: 33px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
 interface FiltersProps {
@@ -32,7 +35,7 @@ export const Filters = ({
         <Select
           allowClear
           placeholder='Тип мероприятия'
-          style={{ width: 180 }}
+          style={{ flex: 1, maxWidth: '140px' }}
           options={categories}
           value={categoryFilter}
           onChange={(category) => setCategoryFilter(category)}
@@ -46,7 +49,7 @@ export const Filters = ({
           />
         </ConfigProvider>
         <Button
-          style={{ width: '150px' }}
+          style={{ flex: 1, maxWidth: '140px' }}
           onClick={() => setFavoriteFilter(!favoriteFilter)}
         >
           {favoriteFilter ? 'Все' : 'Только избранные'}
