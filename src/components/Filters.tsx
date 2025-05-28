@@ -1,6 +1,5 @@
 import { Select, DatePicker, Button, Input, ConfigProvider, Flex } from 'antd';
 import { categories } from '../utils/categories';
-import locale from 'antd/locale/ru_Ru';
 import styled from '@emotion/styled';
 
 const StyledFilters = styled(Flex)`
@@ -40,7 +39,7 @@ export const Filters = ({
         >
           <Select.Option value='sample'>Sample</Select.Option>
         </Select>
-        <ConfigProvider locale={locale}>
+        <ConfigProvider>
           <DatePicker
             format='DD.MM.YYYY'
             onChange={(date) => setDateFilter(date ? date.toISOString() : null)}
