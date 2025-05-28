@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { fetchEvents } from '../hooks/fetchData';
 
 export const Map = () => {
-  const { events, setEvents } = useEventStore();
+  const { events } = useEventStore();
   useEffect(() => {
     fetchEvents().then((data) => {
       useEventStore.getState().setEvents(data);
